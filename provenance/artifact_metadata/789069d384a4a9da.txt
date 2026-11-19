@@ -1,0 +1,61 @@
+# Final experiment design, 1 October 2026
+
+Status: decisions frozen before new posterior evaluation or training. Historical outputs are unchanged.
+
+## Evidence recovered
+
+The 28 September thesis PDF was read, including sections 4.1–4.9. Results and Discussion are empty. No editable thesis source was found in the project. The authoritative v3 summary, decision log D1–D18, run manifest, earlier analysis records, conditional mapping, mass decomposition, bound-mass audit, source modules and diagnostic notebooks were inspected. The PDF's proposed dynamics/stellar-ratio Local Group application is distinct from the absolute-stellar six-model comparison requested now; it is not evidence that that application was executed.
+
+The loaders reproduce 142,713 FLAMINGO pairs (63,071 same-host) and 1,530 TNG pairs (1,253 same-host). Features are separation in kpc and peculiar radial/tangential velocities in km/s. Stellar masses are all-bound catalogue stellar masses, ordered largest first with stable-ID ties. The target remains log10 common-host M200c for same-host pairs and log10 summed host M200c otherwise. BoxUniform(11.5,14.5) is a support restriction; the selected catalogue supplies the empirical mass distribution.
+
+The saved FLAMINGO holdout is retained exactly: 21,409 rows. TNG reuses the historical component-split algorithm, seed 42 and fraction 0.15: 231 rows, 183 same-host and 48 different-host. A new component-disjoint validation split (seed 43, 10% of the remaining components) leaves train/validation counts 109,150/12,154 and 1,169/130. This is an explicit change: historical sbi training randomly split rows internally, and its outer-training scaler included those validation rows. All six models need new fits to make validation/scaling consistent; saved models remain unchanged for the Delta experiment.
+
+These are reused holdouts, not pristine prospective validation: previous scientific analyses inspected both catalogues, including these targets. No current test rows enter fitting, scaling, early stopping or Delta calibration. Historical architecture selection on FLAMINGO is also an inherited limitation.
+
+## Combined-domain decision
+
+Use equal-domain conditional log loss: L = 0.5 mean_F[-log q(theta|x)] + 0.5 mean_T[-log q(theta|x)]. Implement it using independently sampled half-batches from each training domain, with replacement, and exact full-validation domain means for early stopping. Each minibatch contains 32 rows from each domain. This selects an estimand, not an empirically optimal balancing fraction.
+
+| Method | Assessment |
+|---|---|
+| Equal-domain weighted loss on concatenated rows | Same expected objective; uniformly sampled minibatches rarely contain TNG and require large per-row weights, increasing gradient variability. Full-batch computation is unnecessary. |
+| Balanced minibatches | Chosen implementation of equal-domain loss. Exact batch shares, no huge replicated array, all training rows remain eligible. Repeated TNG rows add no independent information. |
+| Fixed oversampling | Same empirical objective if multiplicities are exact; wasteful storage and less transparent epoch accounting. |
+| FLAMINGO undersampling | Discards source information and adds subset variance; answers an equal-sample-size question rather than the requested combined-data question. |
+| Classifier density-ratio weighting | Targets covariate shift under invariant conditional distributions. Existing conditional gaps contradict that working assumption. Weighting p_T(x)/p_F(x) cannot change p_F(theta|x); clipping also changes the estimand. Do not use it as a repair for this experiment. |
+| Domain-adversarial/invariant features | Can remove predictive information when conditional mappings differ; larger redesign and extra tuning are not justified. |
+| Group DRO | Optimizes worst-domain rather than equal-domain risk, with regularization and validation demands on a small TNG sample. Valid alternative question, outside six models. |
+| Domain indicator / separate experts | Useful optional diagnostic of p(theta|x,d), but requires specifying an unknown real-world domain or mixing rule at application. Six separate training-domain comparisons already expose dependence; no additional fit now. |
+
+For an unrestricted density family, the chosen joint is p_mix(theta,x) = [p_F(theta,x)+p_T(theta,x)]/2. Its conditional uses feature-dependent weights p_F(x)/(p_F(x)+p_T(x)), NOT a constant 50:50 average of conditional posteriors. The empirical target prior is also a mixture. This does not recover a true cosmological prior, equalize host fractions, correct finder definitions or remove conditional shift. Domain labels are namespaced; numerical host IDs never connect different simulations.
+
+Primary methodology: [Sugiyama, Krauledat & Müller (2007), JMLR 8:985–1005](https://jmlr.org/papers/v8/sugiyama07a.html) specifies the invariant-conditional covariate-shift assumption. [Zhao et al. (2019), PMLR 97:7523–7532](https://proceedings.mlr.press/v97/zhao19a.html) establishes limitations of invariant representations. [Sagawa et al. (2020), arXiv:1911.08731](https://arxiv.org/abs/1911.08731) studies worst-group objectives and regularization. [Greenberg et al. (2019), PMLR 97:2404–2414](https://proceedings.mlr.press/v97/greenberg19a.html) concerns sequential proposal correction, which is a separate problem from domain balancing. The mixture identity and choice above are this project's derivation and decision, not a claim that those papers prescribe 50:50 training.
+
+## Features, training and validation
+
+Use dynamics and dynamics + log10(Mstar,1+Mstar,2). Stellar sum retains the absolute normalization implicated by the completed diagnostics, adds only one predictor and avoids a second feature grid. It is not selected by final test RMSE. Stellar ratio would largely remove the normalization being investigated.
+
+Keep the scalar affine MAF, 64 hidden units, five transforms, batch size 64, Adam learning rate 0.00016488693479340492, gradient clipping 5, at most 200 epochs and patience 20. The unused historical num_layers parameter remains unused. One epoch contains ceil(maximum domain training count / 64) updates. Combined training draws approximately half a FLAMINGO pass per epoch and repeatedly samples TNG; the manifest records updates and expected exposure. TNG-only epochs are shorter. Thus this controls architecture and objective, not compute or unique sample size. Inspect validation curves and best-epoch/budget exhaustion before reporting; no test-guided tuning.
+
+Fit the external feature scaler on training rows only, with equal-domain weights for combined training. Disable redundant internal x standardization; theta standardization uses only unique training rows. This invertible preprocessing does not change the loss estimand. Use sbi's existing posterior_nn builder and posterior wrapper with a small explicit supervised training loop so validation membership and the domain objective are testable. The [sbi v0.27.0 loader source](https://github.com/sbi-dev/sbi/blob/v0.27.0/sbi/inference/trainers/base.py) uses a random row permutation and the same dataloader override for train and validation; a naive shared sampler override is unsafe.
+
+The scalar affine family is conditionally Gaussian before support restriction. A mixture of differing domain conditionals need not be Gaussian. The combined model is therefore a log-loss projection into this family, not an exact multimodal mixture. This limitation must accompany calibration results. Preserve the controlled family first; architecture expansion requires validation evidence and a separate decision.
+
+## Delta experiment
+
+Use fixed saved M200c stellar-sum and stellar-individual models from 17 September; never retrain them. Shift raw log stellar features before their original scaler. A common shift leaves stellar ratio, dynamics, masses used as truth and pair membership unchanged.
+
+The published 0.3459 dex bound-mass gap and 0.3823 dex M200c gap are vertical target offsets, not horizontal stellar offsets. Moreover, they used all TNG targets. They motivate the experiment but cannot supply a correction claimed independent of the reused test targets.
+
+Calibrate a fresh, model-performance-independent Delta using only the new training partitions. Regress log combined bound mass on dynamics, log stellar sum and host class separately by domain, with an equal-domain reference centre/scale. At that reference let g be the TNG-minus-FLAMINGO intercept gap and b_F the FLAMINGO stellar slope in dex/dex. Define Delta_cal = g/b_F. This aligns the fitted bound-mass mapping at the reference point; it is not an independently measured physical stellar-mass correction, does not invert a noisy regression into a generative law, and assumes a locally useful constant shift. No M200c test target or posterior error is used. Use 500 paired-within-fit component bootstrap replicates for calibration uncertainty, holding the reference fixed. Report dependence on model form and lack of guaranteed global alignment.
+
+Freeze sensitivity grid -0.10 to +0.60 dex in 0.05 steps, plus zero and Delta_cal, before posterior evaluation. Evaluate the same 231 TNG test rows at every value, stratified into pooled/same/different-host. Report all existing posterior metrics, widths, ranks and input-range excursions. The primary contrast is calibrated versus zero. Any grid optimum is descriptive test-target optimization, not the correction. 500 posterior draws, matched random seeds, and 2,000 paired component resamples quantify fixed-model performance uncertainty. Delta calibration uncertainty and model-refitting uncertainty are separate; the latter is not estimated here.
+
+## Execution plan
+
+1. Freeze and hash splits, data identities, configs and Delta calibration in a notebook-visible preparation bundle.
+2. Execute all three notebooks locally through audit/preparation. Test transformations, sampler, weighting, scaling, host separation, target identity and observation algebra.
+3. On the pinned Roihu environment, run a synthetic end-to-end sbi smoke test before scientific fits. Load historical pickles only there.
+4. Run Delta evaluation and the six controlled models into new timestamped directories. No remote submission is assumed from this Windows environment.
+5. Re-execute the notebooks with explicit artifact paths. Save four evaluation populations per model, common row identities, posterior draws, paired intervals and figures. Missing models are marked pending, never replaced by old fits.
+6. Draft Results only after those results exist. A validated Local Group observation likelihood is a separate prerequisite; see OBSERVATIONAL_UNCERTAINTY_DECISION_2026-10-01.md.

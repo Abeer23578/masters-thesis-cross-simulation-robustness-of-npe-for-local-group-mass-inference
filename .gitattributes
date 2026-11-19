@@ -1,0 +1,3 @@
+# Preserve the bytes used by scientific source and artifact checksum checks.
+* -text
+*.sh text eol=lf

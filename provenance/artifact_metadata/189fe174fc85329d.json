@@ -1,0 +1,286 @@
+{
+  "config": {
+    "config_path": "/scratch/project_2019846/FLAMINGO/configs/npe/m200c/stellar_sum.json",
+    "evaluation_batch_size": 256,
+    "experiment_id": "m200c_dynamics_stellar_sum",
+    "feature_block": "dynamics",
+    "limits": {
+      "max_source_test_rows": null,
+      "max_train_rows": null,
+      "max_transfer_rows": null
+    },
+    "mass_feature": "stellar_sum",
+    "npe": {
+      "batch_size": 64,
+      "hidden_features": 64,
+      "learning_rate": 0.00016488693479340492,
+      "max_num_epochs": 200,
+      "model": "maf",
+      "num_transforms": 5,
+      "prior_high": 14.5,
+      "prior_low": 11.5,
+      "stop_after_epochs": 20
+    },
+    "output_root": "out/mass_comparison/stellar_features",
+    "posterior_draws": 200,
+    "require_cuda": true,
+    "scaler": {
+      "fit_on": "source_train",
+      "type": "standard"
+    },
+    "seed": 42,
+    "simulation_test": "tng",
+    "simulation_train": "flamingo",
+    "split": {
+      "method": "connected_host_components",
+      "test_size": 0.15
+    },
+    "target": "m200c",
+    "validity_policy": "global_complete_case"
+  },
+  "environment": {
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GH200 120GB",
+    "git_commit": null,
+    "packages": {
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.2",
+      "pandas": "2.3.3",
+      "sbi": "0.27.0",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.1",
+      "torch": "2.13.0+cu130"
+    },
+    "platform": "Linux-5.14.0-687.41.1.1.el9_8.aarch64+64k-aarch64-with-glibc2.34",
+    "python": "3.12.14",
+    "roihu_job_id": "1381012",
+    "timestamp_utc": "2026-09-17T09:31:40.883321+00:00"
+  },
+  "evaluation": {
+    "source_heldout": {
+      "different_host": {
+        "bias": -0.017418770119547844,
+        "coverage68": 0.7501046462955211,
+        "coverage95": 0.9626622017580577,
+        "mean_width68": 0.2409568749384283,
+        "mean_width95": 0.4675318664205079,
+        "median_beta": 0.5775787830352783,
+        "n": 11945,
+        "r2": 0.7993231415748596,
+        "rank_cdf_distance": 0.07608420850956601,
+        "rmse": 0.11324650794267654
+      },
+      "pooled": {
+        "bias": 0.0006789315375499427,
+        "coverage68": 0.7081601195758793,
+        "coverage95": 0.9486664486898033,
+        "mean_width68": 0.2609362553171488,
+        "mean_width95": 0.5064444163127473,
+        "median_beta": 0.630285382270813,
+        "n": 21409,
+        "r2": 0.8252819776535034,
+        "rank_cdf_distance": 0.022568041663790894,
+        "rmse": 0.13203446567058563
+      },
+      "same_host": {
+        "bias": 0.023520972579717636,
+        "coverage68": 0.6552197802197802,
+        "coverage95": 0.9310016906170753,
+        "mean_width68": 0.28615325643969913,
+        "mean_width95": 0.5555579421435587,
+        "median_beta": 0.705099880695343,
+        "n": 9464,
+        "r2": 0.8068762421607971,
+        "rank_cdf_distance": 0.06735185021637374,
+        "rmse": 0.15247789025306702
+      }
+    },
+    "transfer_tng": {
+      "different_host": {
+        "bias": -0.3303001821041107,
+        "coverage68": 0.010830324909747292,
+        "coverage95": 0.24187725631768953,
+        "mean_width68": 0.26808715627511914,
+        "mean_width95": 0.5209675477299879,
+        "median_beta": 2.4675052165985107,
+        "n": 277,
+        "r2": -2.9258065223693848,
+        "rank_cdf_distance": 0.86439642940532,
+        "rmse": 0.3448807895183563
+      },
+      "pooled": {
+        "bias": -0.30409666895866394,
+        "coverage68": 0.20392156862745098,
+        "coverage95": 0.5398692810457516,
+        "mean_width68": 0.31994575350892307,
+        "mean_width95": 0.6210715761215858,
+        "median_beta": 1.8025319576263428,
+        "n": 1530,
+        "r2": 0.025904595851898193,
+        "rank_cdf_distance": 0.6353428933762559,
+        "rmse": 0.3493458032608032
+      },
+      "same_host": {
+        "bias": -0.29830390214920044,
+        "coverage68": 0.24660814046288906,
+        "coverage95": 0.6057462090981645,
+        "mean_width68": 0.33141010421424133,
+        "mean_width95": 0.6432015169551634,
+        "median_beta": 1.6175094842910767,
+        "n": 1253,
+        "r2": 0.1123552918434143,
+        "rank_cdf_distance": 0.6039197468364482,
+        "rmse": 0.35032519698143005
+      }
+    }
+  },
+  "experiment_id": "m200c_dynamics_stellar_sum",
+  "feature_configuration": {
+    "feature_block": "dynamics",
+    "mass_feature": "stellar_sum",
+    "validity_policy": "global_complete_case"
+  },
+  "feature_names": [
+    "separation",
+    "vr",
+    "vt",
+    "log_stellar_sum"
+  ],
+  "output_path": "/scratch/project_2019846/FLAMINGO/out/mass_comparison/stellar_features/m200c_dynamics_stellar_sum/20260917T095930Z",
+  "provenance": {
+    "source": {
+      "bound_mass_sidecar": {
+        "conversion": "SOAP value multiplied by 1e10; no h correction",
+        "created_utc": "2026-09-16T13:29:39.217893+00:00",
+        "npz_sha256": "9f22de1e4205bb2758c5d32a2823b6c82d44b1379ccef7e69cfa2074c2f7009d",
+        "pair_count": 142713,
+        "pair_endpoint_order": "authoritative pair i/j; ordering is irrelevant to the sum target",
+        "simulation": "FLAMINGO L1_m8 z=0",
+        "source_field": "BoundSubhalo/TotalMass",
+        "source_files": [
+          "D:\\FLAMINGO\\analogues\\cache\\run_001_mstar2e10\\flamingo_sample.pkl",
+          "D:\\FLAMINGO\\analogues\\cache\\run_001_mstar2e10\\flamingo_pairs.pkl"
+        ],
+        "units": "physical Msun",
+        "version": 1
+      },
+      "pairs": "/scratch/project_2019846/FLAMINGO/analogues/cache/run_001_mstar2e10/flamingo_pairs.pkl",
+      "sample": "/scratch/project_2019846/FLAMINGO/analogues/cache/run_001_mstar2e10/flamingo_sample.pkl"
+    },
+    "technical_note": "Saved Optuna num_layers=2 is deliberately unused.",
+    "transfer": {
+      "bound_mass_sidecar": {
+        "authoritative_selection_manifest": "D:\\FLAMINGO\\analogues\\tng_for_comparison_v3\\selection_manifest.json",
+        "conversion": "SubhaloMass multiplied by 1e10/h",
+        "created_utc": "2026-09-16T13:29:54.445226+00:00",
+        "definition": "total mass of all gravitationally bound member particles/cells",
+        "h": 0.6774,
+        "npz_sha256": "6294ab985b9f59c0ef783e718df6b789715e31a0eb09fcd912348e34f1d93a89",
+        "pair_count": 1530,
+        "pair_endpoint_order": "authoritative pair i/j; ordering is irrelevant to the sum target",
+        "simulation": "TNG300-1 snapshot 99 z=0",
+        "source_catalogue": "D:\\uni\\dsp\\tng300\\outputs",
+        "source_field": "SubhaloMass",
+        "stored_units": "1e10 Msun/h",
+        "units": "physical Msun",
+        "version": 1
+      },
+      "selection_manifest": {
+        "BoxSize_ckpc_h": 205000.0,
+        "added_pairs": 0,
+        "catalogue": "D:\\uni\\dsp\\tng300\\outputs",
+        "dataset_sha256": "a2e4de9e8e83305b7f5cafa08a41c59c5cd441dd2efd38f973822edaea90abc2",
+        "different_host": 277,
+        "filters": {
+          "density_radius": 2000,
+          "force_ratio_max": null,
+          "force_ratio_min": null,
+          "intruder_factor": 0.5,
+          "third_massive_factor": 1.5,
+          "tidally_dominant": null,
+          "v_tot_max": 500,
+          "v_tot_min": 0,
+          "vr_max": 0,
+          "vr_min": -400,
+          "vt_max": 300,
+          "vt_min": 0
+        },
+        "h": 0.6774,
+        "intruder_mass": "total bound SubhaloMass",
+        "missing_custom_features": {
+          "metallicity.npy": [],
+          "tng_kappa_corot.pkl": [],
+          "tng_sigma_star.pkl": []
+        },
+        "old_pair_count": 1761,
+        "pair_count": 1530,
+        "pair_density_mpc3": 5.520334885689065e-05,
+        "removed_pairs": 231,
+        "retained_pairs": 1530,
+        "run_version": "v3-isolation-peculiar-calibration",
+        "same_host": 1253,
+        "sample_size": 45392,
+        "selection": {
+          "blue_threshold_gr": 0.68,
+          "box_side_length": 302627.69412459404,
+          "hubble_param": 0.6774,
+          "m_stellar_max": 500000000000.0,
+          "m_stellar_min": 20000000000.0,
+          "r_max": 1000.0,
+          "r_min": 500.0
+        },
+        "snapshot": 99,
+        "volume_mpc3": 27715709.85605198,
+        "vr": "peculiar km/s"
+      }
+    }
+  },
+  "same_diff_counts": {
+    "source": {
+      "false": 79642,
+      "true": 63071
+    },
+    "transfer": {
+      "false": 277,
+      "true": 1253
+    }
+  },
+  "same_diff_host_handling": "pooled source training with connected-host-component split; pooled and same/different-host metrics",
+  "sample_counts": {
+    "source": {
+      "final_pairs": 142713,
+      "finite_configuration_features_and_target": 142713,
+      "finite_required_columns": 142713,
+      "global_complete_case": 142713,
+      "input_pairs": 142713
+    },
+    "source_test": 21409,
+    "source_train": 121304,
+    "transfer": {
+      "final_pairs": 1530,
+      "finite_configuration_features_and_target": 1530,
+      "finite_required_columns": 1530,
+      "global_complete_case": 1530,
+      "input_pairs": 1530
+    },
+    "transfer_evaluation": 1530
+  },
+  "simulation_test": "tng",
+  "simulation_train": "flamingo",
+  "stellar_mass_definition": {
+    "flamingo": "SOAP BoundSubhalo/StellarMass; all bound stars; physical Msun",
+    "ordering": "primary=max(Mstar_a,Mstar_b), secondary=min; stable ID tie-break",
+    "systematic": "HBT-HERONS versus SUBFIND structure-finder difference; no correction applied",
+    "tng": "SUBFIND SubhaloMassType[:,4]; all bound stellar mass; physical Msun after 1e10/h"
+  },
+  "target_column": "log_m200c",
+  "target_definition": "log10(host M200c/Msun) for same-host pairs; log10((host1 M200c + host2 M200c)/Msun) for different-host pairs",
+  "target_name": "m200c",
+  "training_summary": {
+    "best_validation_loss": -0.6412208652685559,
+    "epoch_durations_sec": 16.113972425460815,
+    "epochs_trained": 103,
+    "training_loss": -0.6619115590131528,
+    "validation_loss": -0.6390425949184982
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "calibration": {
+    "bound_gap": 0.36337954030332753,
+    "code_sha256": "bc2f0e2e79eadaf711c6338a6930b786f6f4f1484db269899bac00e56276ffc9",
+    "definition": "training-only bound-mass intercept gap / FLAMINGO stellar slope",
+    "delta": 0.36168937856918487,
+    "flamingo_stellar_slope": 1.0046729647987696,
+    "input_role": "calibration independent of held-out target and NPE performance",
+    "interval95": [
+      0.3527423499218308,
+      0.36930334112245744
+    ],
+    "n_flamingo": 109150,
+    "n_tng": 1169,
+    "predictors": [
+      "separation",
+      "vr",
+      "vt",
+      "log_stellar_sum",
+      "same_host"
+    ],
+    "reference_centre": [
+      755.910970402922,
+      -142.5575646206097,
+      118.77364616023954,
+      11.142494688427814,
+      0.6310116590325664
+    ],
+    "reference_scale": [
+      145.47041025131665,
+      85.66749064917336,
+      71.14775106468853,
+      0.2472618569642472,
+      0.48253077124421256
+    ],
+    "repeats": 500,
+    "seed": 261001,
+    "training_identity": {
+      "flamingo": "18ae802dae130d3964b2e4cc402de443a236ac880995a98fded0e2934531647c",
+      "tng": "2cd6d4fd5043fb07ca284f76f8bceedea93938cd02837bc6da4b3f4495cbf94e"
+    }
+  },
+  "deltas": [
+    -0.1,
+    -0.05,
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.36168937856918487,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6
+  ],
+  "draws": 500,
+  "environment": {
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 2050",
+    "git_commit": null,
+    "packages": {
+      "matplotlib": "3.10.8",
+      "numpy": "2.4.3",
+      "pandas": "2.3.3",
+      "sbi": "0.26.1",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.1",
+      "torch": "2.5.1+cu121"
+    },
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.0",
+    "roihu_job_id": null,
+    "timestamp_utc": "2026-10-01T18:45:11.068614+00:00"
+  },
+  "mode": "prepare",
+  "models": {
+    "stellar_individual": {
+      "features": [
+        "separation",
+        "vr",
+        "vt",
+        "log_mstar_primary",
+        "log_mstar_secondary"
+      ],
+      "manifest_sha256": "7ccab30e2e501d92da19f4e46f6a9053628dfa50d496e55b10efb01f05d0efb1",
+      "model_sha256": "51e57f28c0a6d27178f6ca7beaf7ad1e083b4778eb84023427318c39dc6267e3",
+      "run": "out\\mass_comparison\\stellar_features\\m200c_dynamics_stellar_individual\\20260917T094931Z",
+      "split_sha256": "fc38a9b561cf72bf7cb9d342385414133a732bc043adc1e80533d079ac5854b3"
+    },
+    "stellar_sum": {
+      "features": [
+        "separation",
+        "vr",
+        "vt",
+        "log_stellar_sum"
+      ],
+      "manifest_sha256": "f6335ba63a4669751f1f18de417867ac7b02ee88a53dca1e6298486bee343aad",
+      "model_sha256": "c26e6ab59763178e0d5743d74e3fe44927d7230964e082861b610c403a969045",
+      "run": "out\\mass_comparison\\stellar_features\\m200c_dynamics_stellar_sum\\20260917T095930Z",
+      "split_sha256": "fc38a9b561cf72bf7cb9d342385414133a732bc043adc1e80533d079ac5854b3"
+    }
+  },
+  "n_test": 231,
+  "seed": 261001,
+  "split_sha256": "69a09e48f0abec5aef8ad9ecb70b877f6fbaa50c0ca85afbe2af7e78c9f2df0d"
+}

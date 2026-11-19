@@ -1,0 +1,7 @@
+domain,partition,n,same_host,different_host
+flamingo,train,109150,48301,60849
+flamingo,validation,12154,5306,6848
+flamingo,test,21409,9464,11945
+tng,train,1169,958,211
+tng,validation,130,112,18
+tng,test,231,183,48

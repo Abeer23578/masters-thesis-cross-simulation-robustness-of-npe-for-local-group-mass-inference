@@ -1,0 +1,12 @@
+{
+  "stellar_individual": {
+    "path": "out\\mass_comparison\\posterior_evaluation\\20260924T081006Z\\m200c_stellar_individual\\transfer_tng_posterior_draws.npz",
+    "seed": 260938,
+    "sha256": "775f541180970b2db69d090e7f7743a47c8d652d3463b28cc0a5a3555b646026"
+  },
+  "stellar_sum": {
+    "path": "out\\mass_comparison\\posterior_evaluation\\20260924T081006Z\\m200c_stellar_sum\\transfer_tng_posterior_draws.npz",
+    "seed": 260958,
+    "sha256": "6a29ea20cebc2b3bebf6602f5d6dacd1c712464613de35711805ab33ccecd987"
+  }
+}

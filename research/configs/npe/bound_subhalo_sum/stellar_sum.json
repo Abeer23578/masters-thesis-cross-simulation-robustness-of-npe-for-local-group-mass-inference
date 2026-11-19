@@ -1,0 +1,10 @@
+{
+  "experiment_id": "bound_subhalo_sum_dynamics_stellar_sum",
+  "target": "bound_subhalo_sum",
+  "feature_block": "dynamics",
+  "mass_feature": "stellar_sum",
+  "validity_policy": "global_complete_case",
+  "seed": 42,
+  "require_cuda": true,
+  "output_root": "out/mass_comparison/bound_mass_target"
+}

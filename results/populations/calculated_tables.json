@@ -1,0 +1,168 @@
+{
+  "densities": {
+    "flamingo": {
+      "volume": 1000000000.0,
+      "side": 999.9999999999997,
+      "stellar_selected_number_density": 0.004687523,
+      "sample_number_density": 0.00336661,
+      "pair_number_density": 0.000142713,
+      "pair_efficiency": 0.04239071350705903
+    },
+    "tng": {
+      "volume": 27715709.85605198,
+      "side": 302.6276941245939,
+      "stellar_selected_number_density": 0.0021851145186085044,
+      "sample_number_density": 0.001637771510661425,
+      "pair_number_density": 5.520334885689065e-05,
+      "pair_efficiency": 0.0337063799788509
+    }
+  },
+  "pair_stats": {
+    "flamingo": {
+      "n": 142713,
+      "same": 63071,
+      "different": 79642,
+      "blue_blue": 25465,
+      "red_red": 49609,
+      "mixed": 67639,
+      "mean_separation": 764.8723522533829,
+      "mean_velocity": 177.6617897829819,
+      "mean_ratio": 0.42380303144454956
+    },
+    "tng": {
+      "n": 1530,
+      "same": 1253,
+      "different": 277,
+      "blue_blue": 157,
+      "red_red": 752,
+      "mixed": 621,
+      "mean_separation": 747.3369140625,
+      "mean_velocity": 221.86611938476562,
+      "mean_ratio": 0.3403867130444576
+    }
+  },
+  "components": {
+    "flamingo_full": {
+      "n_rows": 142713,
+      "components": 138559,
+      "largest_rows": 4,
+      "median_rows": 1.0,
+      "largest_percent": 0.0028028280535059877
+    },
+    "flamingo_same_host": {
+      "n_rows": 63071,
+      "components": 63071,
+      "largest_rows": 1,
+      "median_rows": 1.0,
+      "largest_percent": 0.0015855147373594837
+    },
+    "flamingo_different_host": {
+      "n_rows": 79642,
+      "components": 77585,
+      "largest_rows": 3,
+      "median_rows": 1.0,
+      "largest_percent": 0.003766856683659376
+    },
+    "flamingo_train": {
+      "n_rows": 109150,
+      "components": 105997,
+      "largest_rows": 4,
+      "median_rows": 1.0,
+      "largest_percent": 0.0036646816307833257
+    },
+    "flamingo_validation": {
+      "n_rows": 12154,
+      "components": 11778,
+      "largest_rows": 3,
+      "median_rows": 1.0,
+      "largest_percent": 0.024683231857824586
+    },
+    "flamingo_test": {
+      "n_rows": 21409,
+      "components": 20784,
+      "largest_rows": 4,
+      "median_rows": 1.0,
+      "largest_percent": 0.01868373114110888
+    },
+    "tng_full": {
+      "n_rows": 1530,
+      "components": 1521,
+      "largest_rows": 2,
+      "median_rows": 1.0,
+      "largest_percent": 0.13071895424836602
+    },
+    "tng_same_host": {
+      "n_rows": 1253,
+      "components": 1253,
+      "largest_rows": 1,
+      "median_rows": 1.0,
+      "largest_percent": 0.07980845969672785
+    },
+    "tng_different_host": {
+      "n_rows": 277,
+      "components": 277,
+      "largest_rows": 1,
+      "median_rows": 1.0,
+      "largest_percent": 0.36101083032490977
+    },
+    "tng_train": {
+      "n_rows": 1169,
+      "components": 1162,
+      "largest_rows": 2,
+      "median_rows": 1.0,
+      "largest_percent": 0.1710863986313088
+    },
+    "tng_validation": {
+      "n_rows": 130,
+      "components": 130,
+      "largest_rows": 1,
+      "median_rows": 1.0,
+      "largest_percent": 0.7692307692307693
+    },
+    "tng_test": {
+      "n_rows": 231,
+      "components": 229,
+      "largest_rows": 2,
+      "median_rows": 1.0,
+      "largest_percent": 0.8658008658008658
+    }
+  },
+  "distributions": {
+    "sigma": {
+      "n_flamingo": 285426,
+      "n_tng": 3060,
+      "ks": 0.08159222066830141,
+      "wasserstein": 3.390320296212734,
+      "normalizer": 27.512221464467416,
+      "normalized_wasserstein": 0.1232296090881429
+    },
+    "kappa": {
+      "n_flamingo": 285426,
+      "n_tng": 3060,
+      "ks": 0.20848244996848875,
+      "wasserstein": 0.05704337638823677,
+      "normalizer": 0.10262412284093307,
+      "normalized_wasserstein": 0.5558476390259018
+    },
+    "color": {
+      "n_flamingo": 285426,
+      "n_tng": 3060,
+      "ks": 0.1194932363225083,
+      "wasserstein": 0.03448927194650868,
+      "normalizer": 0.1701649033525438,
+      "normalized_wasserstein": 0.20268146525523295
+    },
+    "metallicity": {
+      "n_flamingo": 285426,
+      "n_tng": 3060,
+      "ks": 0.8253640688160236,
+      "wasserstein": 0.009251253650399098,
+      "normalizer": 0.005274985991488053,
+      "normalized_wasserstein": 1.7537968186697221
+    }
+  },
+  "disc_fraction_pair_member": {
+    "flamingo": 0.28462368529846616,
+    "tng": 0.4594771241830065
+  }
+}

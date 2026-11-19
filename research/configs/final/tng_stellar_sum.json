@@ -1,0 +1,26 @@
+{
+  "experiment_id": "final_v1_tng_stellar_sum",
+  "training_domains": [
+    "tng"
+  ],
+  "mass_feature": "stellar_sum",
+  "target": "m200c",
+  "seed": 42,
+  "npe": {
+    "model": "maf",
+    "hidden_features": 64,
+    "num_transforms": 5,
+    "learning_rate": 0.00016488693479340492,
+    "batch_size": 64,
+    "max_num_epochs": 200,
+    "stop_after_epochs": 20,
+    "prior_low": 11.5,
+    "prior_high": 14.5
+  },
+  "posterior_draws": 500,
+  "objective": "equal_domain_log_loss",
+  "observation_noise": "none",
+  "split_bundle": "data/derived/final_experiment_v1",
+  "output_root": "out/final_six/models",
+  "design_record": "FINAL_EXPERIMENT_DESIGN_2026-10-01.md"
+}

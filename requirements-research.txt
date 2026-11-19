@@ -1,0 +1,15 @@
+# Pins reproduce the authoritative Roihu v3 environment. Do not upgrade in this experiment.
+sbi==0.27.0
+numpy==2.5.2
+scipy==1.18.1
+scikit-learn==1.9.0
+pandas==2.3.3
+matplotlib==3.11.1
+seaborn==0.13.2
+joblib==1.5.3
+h5py==3.16.0
+papermill==2.7.0
+# torch==2.13.0+cu130 is supplied by CSC module python-pytorch/2.13.
+
+# Regression and final-stage smoke checks.
+pytest>=8

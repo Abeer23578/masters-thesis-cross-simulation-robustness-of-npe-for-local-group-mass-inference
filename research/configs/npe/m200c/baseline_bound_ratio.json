@@ -1,0 +1,10 @@
+{
+  "experiment_id": "m200c_dynamics_bound_subhalo_ratio_baseline_replication",
+  "target": "m200c",
+  "feature_block": "dynamics",
+  "mass_feature": "bound_subhalo_ratio",
+  "validity_policy": "global_complete_case",
+  "seed": 42,
+  "require_cuda": true,
+  "output_root": "out/mass_comparison/stellar_features"
+}

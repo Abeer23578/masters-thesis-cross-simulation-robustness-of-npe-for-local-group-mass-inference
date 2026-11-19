@@ -1,0 +1,10 @@
+# Read and execute notebooks 00-13. No GPU, sbi or pickle loading required.
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.8
+jupyterlab>=4
+nbformat>=5.9
+nbclient>=0.9
+ipykernel>=6
+tabulate>=0.9

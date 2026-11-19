@@ -1,0 +1,41 @@
+{
+  "bound_gap": 0.36337954030332753,
+  "code_sha256": "bc2f0e2e79eadaf711c6338a6930b786f6f4f1484db269899bac00e56276ffc9",
+  "definition": "training-only bound-mass intercept gap / FLAMINGO stellar slope",
+  "delta": 0.36168937856918487,
+  "flamingo_stellar_slope": 1.0046729647987696,
+  "input_role": "calibration independent of held-out target and NPE performance",
+  "interval95": [
+    0.3527423499218308,
+    0.36930334112245744
+  ],
+  "n_flamingo": 109150,
+  "n_tng": 1169,
+  "predictors": [
+    "separation",
+    "vr",
+    "vt",
+    "log_stellar_sum",
+    "same_host"
+  ],
+  "reference_centre": [
+    755.910970402922,
+    -142.5575646206097,
+    118.77364616023954,
+    11.142494688427814,
+    0.6310116590325664
+  ],
+  "reference_scale": [
+    145.47041025131665,
+    85.66749064917336,
+    71.14775106468853,
+    0.2472618569642472,
+    0.48253077124421256
+  ],
+  "repeats": 500,
+  "seed": 261001,
+  "training_identity": {
+    "flamingo": "18ae802dae130d3964b2e4cc402de443a236ac880995a98fded0e2934531647c",
+    "tng": "2cd6d4fd5043fb07ca284f76f8bceedea93938cd02837bc6da4b3f4495cbf94e"
+  }
+}

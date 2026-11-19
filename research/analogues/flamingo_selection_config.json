@@ -1,0 +1,25 @@
+{
+  "sample": {
+    "mstar_min_msun": 20000000000.0,
+    "mstar_max_msun": 500000000000.0,
+    "blue_threshold_gr": 0.68,
+    "disc_threshold_kappa": 0.35
+  },
+  "pairs": {
+    "r_min_kpc": 500.0,
+    "r_max_kpc": 1000.0
+  },
+  "filters": {
+    "vr_min_kms": -400.0,
+    "vr_max_kms": 0.0,
+    "vt_min_kms": 0.0,
+    "vt_max_kms": 300.0,
+    "v_total_max_kms": 500.0,
+    "same_host": null,
+    "color_pair": "any",
+    "disc_pair": "any",
+    "third_massive_factor": 1.5,
+    "density_radius_kpc": 2000.0,
+    "intruder_factor": 0.5
+  }
+}

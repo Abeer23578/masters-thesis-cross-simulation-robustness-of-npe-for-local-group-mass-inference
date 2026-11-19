@@ -1,0 +1,18 @@
+{
+  "schema": "frozen-calibration-portability-v3",
+  "training_identity": {
+    "flamingo": "c272ebb3c1af38755d515898b7d6eafba2862d2a694caf45e9f2eb137cd30e4c",
+    "tng": "6d7a2c6a07041d348c33b92dfcb3642a5e2a2dce2f2e73e8d036c74a8909d2a4"
+  },
+  "file_sha256": {
+    "data/derived/final_experiment_v1/splits.npz": "69a09e48f0abec5aef8ad9ecb70b877f6fbaa50c0ca85afbe2af7e78c9f2df0d",
+    "data/derived/final_experiment_v1/delta_calibration.json": "50a4cddc274a6f4ece2239fe3c984dc82f158af5b3b9a5486866a929fb985de5",
+    "data/derived/final_experiment_v1/delta_calibration_draws.npy": "6d14d2e9eb441ba8f6adcfae73145453fa2672f9c663c512e22abc23c45eb413",
+    "src/lg_npe/final_design.py": "78f13293494f65d3ae66a557412c4fb5c7c3a5b44c6e63d5a3708af859d520aa",
+    "data/derived/bound_subhalo_masses/flamingo_bound_subhalo_masses_v1.npz": "9f22de1e4205bb2758c5d32a2823b6c82d44b1379ccef7e69cfa2074c2f7009d",
+    "data/derived/bound_subhalo_masses/flamingo_bound_subhalo_masses_v1.json": "73f7f3bb92a90e4574246e25b8787b2ebe2a1dd15baab0788adefa0c8c1aaa73",
+    "data/derived/bound_subhalo_masses/tng_bound_subhalo_masses_v1.npz": "6294ab985b9f59c0ef783e718df6b789715e31a0eb09fcd912348e34f1d93a89",
+    "data/derived/bound_subhalo_masses/tng_bound_subhalo_masses_v1.json": "d6181ac11619ca85c310fcb6ebb9c318e0cb868e276eb9fc15998ebb1e518585"
+  },
+  "reason": "Retain original calibration; replace runtime log-byte identity with exact source-file provenance."
+}

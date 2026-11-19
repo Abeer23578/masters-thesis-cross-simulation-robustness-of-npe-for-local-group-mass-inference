@@ -1,0 +1,30 @@
+{
+  "experiment_id": "smoke_m200c_dynamics_bound_ratio",
+  "simulation_train": "flamingo",
+  "simulation_test": "tng",
+  "target": "m200c",
+  "feature_block": "dynamics",
+  "mass_feature": "bound_subhalo_ratio",
+  "validity_policy": "global_complete_case",
+  "seed": 42,
+  "require_cuda": true,
+  "npe": {
+    "model": "maf",
+    "hidden_features": 64,
+    "num_transforms": 5,
+    "learning_rate": 0.00016488693479340492,
+    "batch_size": 64,
+    "max_num_epochs": 2,
+    "stop_after_epochs": 1,
+    "prior_low": 11.5,
+    "prior_high": 14.5
+  },
+  "posterior_draws": 16,
+  "evaluation_batch_size": 16,
+  "limits": {
+    "max_train_rows": 256,
+    "max_source_test_rows": 32,
+    "max_transfer_rows": 32
+  },
+  "output_root": "out/mass_comparison/smoke"
+}

@@ -1,0 +1,403 @@
+{
+  "config": {
+    "design_record": "FINAL_EXPERIMENT_DESIGN_2026-10-01.md",
+    "experiment_id": "final_v1_combined_dynamics",
+    "mass_feature": "none",
+    "npe": {
+      "batch_size": 64,
+      "hidden_features": 64,
+      "learning_rate": 0.00016488693479340492,
+      "max_num_epochs": 200,
+      "model": "maf",
+      "num_transforms": 5,
+      "prior_high": 14.5,
+      "prior_low": 11.5,
+      "stop_after_epochs": 20
+    },
+    "objective": "equal_domain_log_loss",
+    "observation_noise": "none",
+    "output_root": "out/final_six/models",
+    "posterior_draws": 500,
+    "seed": 42,
+    "split_bundle": "data/derived/final_experiment_v1",
+    "target": "m200c",
+    "training_domains": [
+      "flamingo",
+      "tng"
+    ]
+  },
+  "data_identity": {
+    "flamingo": "a23f726a1869af695bde0f1c62527ec595f5e1a59522e0f3b55b517b8811e69a",
+    "historical_split_sha256": "fc38a9b561cf72bf7cb9d342385414133a732bc043adc1e80533d079ac5854b3",
+    "tng": "6394a47d6f81aed87f0fdc0235ddd2d94bd1f1fc35a9669f93803d85bf75ffb2"
+  },
+  "design_sha256": "9c84215c4c8a282c2215d05dd397b01e2add299667a89cafb7dcc7559264947f",
+  "environment": {
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GH200 120GB",
+    "git_commit": null,
+    "packages": {
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.2",
+      "pandas": "2.3.3",
+      "sbi": "0.27.0",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.1",
+      "torch": "2.13.0+cu130"
+    },
+    "platform": "Linux-5.14.0-687.41.1.1.el9_8.aarch64+64k-aarch64-with-glibc2.34",
+    "python": "3.12.14",
+    "roihu_job_id": "1845009",
+    "timestamp_utc": "2026-10-02T08:47:06.090785+00:00"
+  },
+  "model_sha256": "58571fbd5fe4e68231c5322a03bbd3992179d4cb5c7fa0cb78c0a7dfbe0d7060",
+  "source_sha256": {
+    "src/lg_npe/__init__.py": "4089927c9e0ebb584c9f87d15960b60fedc8fe5aa1a054c9f4f8c2b46ce90363",
+    "src/lg_npe/config.py": "073219ba44727a0fb5dadc7d80d539ef434755999c02a3926c0609f5fcb9ae9b",
+    "src/lg_npe/constants.py": "6ec02055a56a75494e172352ddddc192b6287173922f3dd5e352ec5db63bc377",
+    "src/lg_npe/controlled_training.py": "5b1695e6b370493440ecf026b2ba95f6c48fc805c4993cafa416f306971e7134",
+    "src/lg_npe/data.py": "d665bcc906bbd3628cfbe6eb1773b34cdedd7a3ea0431d6a60375940cb010010",
+    "src/lg_npe/evaluation.py": "e17c4f13fca551a10dc75a898cade3d4ffbbad1677b6811f12cd91d95a652e62",
+    "src/lg_npe/features.py": "bc0540aed189169e972f11bfb290d557cd27b1d6d26e78285f58886d6d1a1839",
+    "src/lg_npe/final_design.py": "78f13293494f65d3ae66a557412c4fb5c7c3a5b44c6e63d5a3708af859d520aa",
+    "src/lg_npe/inference.py": "174cc063480bab5277342c799e0468138108a2de074c80ffe27c30bf4b99438f",
+    "src/lg_npe/observation.py": "f443314199ed2347b1d7a528fd6a75cf540ac8105313714b2f2360fbaceb2b8e",
+    "src/lg_npe/registry.py": "6bc8f8e5e8f49ab880d240af8c408ca36b75e82fb8a074effe52de4f7a70b0f1",
+    "src/lg_npe/splitting.py": "6acf25ff8bd747ffcc6f908c2398a9cbc1186c95ebb487231b4809bb72f7728a",
+    "src/lg_npe/validation.py": "8ef1c625decf116780acb79304c08b7972282b6a1de8d27e76e02e62315e913d"
+  },
+  "split_sha256": "69a09e48f0abec5aef8ad9ecb70b877f6fbaa50c0ca85afbe2af7e78c9f2df0d",
+  "training_summary": {
+    "best_epoch": 12,
+    "best_validation_nll": 0.08137520056124212,
+    "epoch_steps": 1706,
+    "expected_rows_per_domain_per_epoch": 54592.0,
+    "history": [
+      {
+        "epoch": 1,
+        "train_nll": 0.166935439609703,
+        "updates": 1706,
+        "validation_by_domain": {
+          "flamingo": 0.021995525444850575,
+          "tng": 0.23619873340313252
+        },
+        "validation_nll": 0.12909712942399154
+      },
+      {
+        "epoch": 2,
+        "train_nll": 0.12243529723395985,
+        "updates": 3412,
+        "validation_by_domain": {
+          "flamingo": -0.008162784835353423,
+          "tng": 0.21775518564077523
+        },
+        "validation_nll": 0.1047962004027109
+      },
+      {
+        "epoch": 3,
+        "train_nll": 0.11988845889446743,
+        "updates": 5118,
+        "validation_by_domain": {
+          "flamingo": -0.011890348525782527,
+          "tng": 0.23324448512150692
+        },
+        "validation_nll": 0.1106770682978622
+      },
+      {
+        "epoch": 4,
+        "train_nll": 0.11829236651970573,
+        "updates": 6824,
+        "validation_by_domain": {
+          "flamingo": -0.019656652601529878,
+          "tng": 0.22387589674729566
+        },
+        "validation_nll": 0.10210962207288289
+      },
+      {
+        "epoch": 5,
+        "train_nll": 0.11566898009957088,
+        "updates": 8530,
+        "validation_by_domain": {
+          "flamingo": 0.034227654477650346,
+          "tng": 0.17968171926645132
+        },
+        "validation_nll": 0.10695468687205084
+      },
+      {
+        "epoch": 6,
+        "train_nll": 0.11904799088438293,
+        "updates": 10236,
+        "validation_by_domain": {
+          "flamingo": -0.03956882016368852,
+          "tng": 0.24383365924541767
+        },
+        "validation_nll": 0.10213241954086458
+      },
+      {
+        "epoch": 7,
+        "train_nll": 0.11579426214457048,
+        "updates": 11942,
+        "validation_by_domain": {
+          "flamingo": -0.0272830479314144,
+          "tng": 0.21800444676325872
+        },
+        "validation_nll": 0.09536069941592216
+      },
+      {
+        "epoch": 8,
+        "train_nll": 0.1131777570311063,
+        "updates": 13648,
+        "validation_by_domain": {
+          "flamingo": -0.014272145305355461,
+          "tng": 0.2143649908212515
+        },
+        "validation_nll": 0.10004642275794802
+      },
+      {
+        "epoch": 9,
+        "train_nll": 0.11136765088689494,
+        "updates": 15354,
+        "validation_by_domain": {
+          "flamingo": -0.04774232598851342,
+          "tng": 0.24516107119046726
+        },
+        "validation_nll": 0.09870937260097692
+      },
+      {
+        "epoch": 10,
+        "train_nll": 0.10832498598666938,
+        "updates": 17060,
+        "validation_by_domain": {
+          "flamingo": 0.024324296276801233,
+          "tng": 0.16379790672889122
+        },
+        "validation_nll": 0.09406110150284623
+      },
+      {
+        "epoch": 11,
+        "train_nll": 0.11039704568291046,
+        "updates": 18766,
+        "validation_by_domain": {
+          "flamingo": -0.0072404578345297045,
+          "tng": 0.1928466063279372
+        },
+        "validation_nll": 0.09280307424670375
+      },
+      {
+        "epoch": 12,
+        "train_nll": 0.10337239211580224,
+        "updates": 20472,
+        "validation_by_domain": {
+          "flamingo": 0.0027668982209668107,
+          "tng": 0.15998350290151742
+        },
+        "validation_nll": 0.08137520056124212
+      },
+      {
+        "epoch": 13,
+        "train_nll": 0.10146284216779075,
+        "updates": 22178,
+        "validation_by_domain": {
+          "flamingo": -0.011750060946646736,
+          "tng": 0.17839538867657
+        },
+        "validation_nll": 0.08332266386496164
+      },
+      {
+        "epoch": 14,
+        "train_nll": 0.10184573135551629,
+        "updates": 23884,
+        "validation_by_domain": {
+          "flamingo": -0.031796114135184766,
+          "tng": 0.204044796870305
+        },
+        "validation_nll": 0.08612434136756011
+      },
+      {
+        "epoch": 15,
+        "train_nll": 0.09965862856647228,
+        "updates": 25590,
+        "validation_by_domain": {
+          "flamingo": 0.00021684336509284014,
+          "tng": 0.19660562368539664
+        },
+        "validation_nll": 0.09841123352524474
+      },
+      {
+        "epoch": 16,
+        "train_nll": 0.09037523186827845,
+        "updates": 27296,
+        "validation_by_domain": {
+          "flamingo": -0.027752517221867303,
+          "tng": 0.19889024587777945
+        },
+        "validation_nll": 0.08556886432795607
+      },
+      {
+        "epoch": 17,
+        "train_nll": 0.09585735934992852,
+        "updates": 29002,
+        "validation_by_domain": {
+          "flamingo": -0.030421821581056014,
+          "tng": 0.19631817157451922
+        },
+        "validation_nll": 0.0829481749967316
+      },
+      {
+        "epoch": 18,
+        "train_nll": 0.10560562453207593,
+        "updates": 30708,
+        "validation_by_domain": {
+          "flamingo": -0.007060257094224582,
+          "tng": 0.18473449120154747
+        },
+        "validation_nll": 0.08883711705366144
+      },
+      {
+        "epoch": 19,
+        "train_nll": 0.1015917859269483,
+        "updates": 32414,
+        "validation_by_domain": {
+          "flamingo": -0.03379876985937548,
+          "tng": 0.20743075150709886
+        },
+        "validation_nll": 0.08681599082386168
+      },
+      {
+        "epoch": 20,
+        "train_nll": 0.09616720703007939,
+        "updates": 34120,
+        "validation_by_domain": {
+          "flamingo": -0.018887204717448106,
+          "tng": 0.19941010108360877
+        },
+        "validation_nll": 0.09026144818308032
+      },
+      {
+        "epoch": 21,
+        "train_nll": 0.09515275391351523,
+        "updates": 35826,
+        "validation_by_domain": {
+          "flamingo": -0.006286444310120342,
+          "tng": 0.17374173677884616
+        },
+        "validation_nll": 0.0837276462343629
+      },
+      {
+        "epoch": 22,
+        "train_nll": 0.09881032568840409,
+        "updates": 37532,
+        "validation_by_domain": {
+          "flamingo": 0.01406881902216688,
+          "tng": 0.1606500478891226
+        },
+        "validation_nll": 0.08735943345564474
+      },
+      {
+        "epoch": 23,
+        "train_nll": 0.09907878852631692,
+        "updates": 39238,
+        "validation_by_domain": {
+          "flamingo": 0.028851768580906403,
+          "tng": 0.15943572704608625
+        },
+        "validation_nll": 0.09414374781349633
+      },
+      {
+        "epoch": 24,
+        "train_nll": 0.09780403823075338,
+        "updates": 40944,
+        "validation_by_domain": {
+          "flamingo": -0.002894584061931932,
+          "tng": 0.17352066040039063
+        },
+        "validation_nll": 0.08531303816922935
+      },
+      {
+        "epoch": 25,
+        "train_nll": 0.09850867481788693,
+        "updates": 42650,
+        "validation_by_domain": {
+          "flamingo": -0.011799779439690437,
+          "tng": 0.18642730712890626
+        },
+        "validation_nll": 0.08731376384460791
+      },
+      {
+        "epoch": 26,
+        "train_nll": 0.09469399710239325,
+        "updates": 44356,
+        "validation_by_domain": {
+          "flamingo": 0.03144707651500818,
+          "tng": 0.15721903580885668
+        },
+        "validation_nll": 0.09433305616193244
+      },
+      {
+        "epoch": 27,
+        "train_nll": 0.09486798939741667,
+        "updates": 46062,
+        "validation_by_domain": {
+          "flamingo": -0.021624406584199368,
+          "tng": 0.20352756793682392
+        },
+        "validation_nll": 0.09095158067631227
+      },
+      {
+        "epoch": 28,
+        "train_nll": 0.09768203396354512,
+        "updates": 47768,
+        "validation_by_domain": {
+          "flamingo": 0.016821992697440342,
+          "tng": 0.1684589826143705
+        },
+        "validation_nll": 0.09264048765590542
+      },
+      {
+        "epoch": 29,
+        "train_nll": 0.08912033460333349,
+        "updates": 49474,
+        "validation_by_domain": {
+          "flamingo": -0.043802862636584367,
+          "tng": 0.24611839881310096
+        },
+        "validation_nll": 0.1011577680882583
+      },
+      {
+        "epoch": 30,
+        "train_nll": 0.09246932677073014,
+        "updates": 51180,
+        "validation_by_domain": {
+          "flamingo": -0.029036603437671345,
+          "tng": 0.23316626915564903
+        },
+        "validation_nll": 0.10206483285898885
+      },
+      {
+        "epoch": 31,
+        "train_nll": 0.08628511039380767,
+        "updates": 52886,
+        "validation_by_domain": {
+          "flamingo": -0.029650123530907794,
+          "tng": 0.20789005572979266
+        },
+        "validation_nll": 0.08911996609944244
+      },
+      {
+        "epoch": 32,
+        "train_nll": 0.09078081851991075,
+        "updates": 54592,
+        "validation_by_domain": {
+          "flamingo": -0.027470277056836055,
+          "tng": 0.22587086604191706
+        },
+        "validation_nll": 0.0992002944925405
+      }
+    ],
+    "stopped_early": true,
+    "unique_train_counts": {
+      "flamingo": 109150,
+      "tng": 1169
+    }
+  }
+}

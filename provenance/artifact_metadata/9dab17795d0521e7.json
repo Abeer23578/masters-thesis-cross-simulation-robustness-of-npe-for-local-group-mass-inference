@@ -1,0 +1,205 @@
+{
+  "configs": {
+    "combined_dynamics": {
+      "design_record": "FINAL_EXPERIMENT_DESIGN_2026-10-01.md",
+      "experiment_id": "final_v1_combined_dynamics",
+      "mass_feature": "none",
+      "npe": {
+        "batch_size": 64,
+        "hidden_features": 64,
+        "learning_rate": 0.00016488693479340492,
+        "max_num_epochs": 200,
+        "model": "maf",
+        "num_transforms": 5,
+        "prior_high": 14.5,
+        "prior_low": 11.5,
+        "stop_after_epochs": 20
+      },
+      "objective": "equal_domain_log_loss",
+      "observation_noise": "none",
+      "output_root": "out/final_six/models",
+      "posterior_draws": 500,
+      "seed": 42,
+      "split_bundle": "data/derived/final_experiment_v1",
+      "target": "m200c",
+      "training_domains": [
+        "flamingo",
+        "tng"
+      ]
+    },
+    "combined_stellar_sum": {
+      "design_record": "FINAL_EXPERIMENT_DESIGN_2026-10-01.md",
+      "experiment_id": "final_v1_combined_stellar_sum",
+      "mass_feature": "stellar_sum",
+      "npe": {
+        "batch_size": 64,
+        "hidden_features": 64,
+        "learning_rate": 0.00016488693479340492,
+        "max_num_epochs": 200,
+        "model": "maf",
+        "num_transforms": 5,
+        "prior_high": 14.5,
+        "prior_low": 11.5,
+        "stop_after_epochs": 20
+      },
+      "objective": "equal_domain_log_loss",
+      "observation_noise": "none",
+      "output_root": "out/final_six/models",
+      "posterior_draws": 500,
+      "seed": 42,
+      "split_bundle": "data/derived/final_experiment_v1",
+      "target": "m200c",
+      "training_domains": [
+        "flamingo",
+        "tng"
+      ]
+    },
+    "flamingo_dynamics": {
+      "design_record": "FINAL_EXPERIMENT_DESIGN_2026-10-01.md",
+      "experiment_id": "final_v1_flamingo_dynamics",
+      "mass_feature": "none",
+      "npe": {
+        "batch_size": 64,
+        "hidden_features": 64,
+        "learning_rate": 0.00016488693479340492,
+        "max_num_epochs": 200,
+        "model": "maf",
+        "num_transforms": 5,
+        "prior_high": 14.5,
+        "prior_low": 11.5,
+        "stop_after_epochs": 20
+      },
+      "objective": "equal_domain_log_loss",
+      "observation_noise": "none",
+      "output_root": "out/final_six/models",
+      "posterior_draws": 500,
+      "seed": 42,
+      "split_bundle": "data/derived/final_experiment_v1",
+      "target": "m200c",
+      "training_domains": [
+        "flamingo"
+      ]
+    },
+    "flamingo_stellar_sum": {
+      "design_record": "FINAL_EXPERIMENT_DESIGN_2026-10-01.md",
+      "experiment_id": "final_v1_flamingo_stellar_sum",
+      "mass_feature": "stellar_sum",
+      "npe": {
+        "batch_size": 64,
+        "hidden_features": 64,
+        "learning_rate": 0.00016488693479340492,
+        "max_num_epochs": 200,
+        "model": "maf",
+        "num_transforms": 5,
+        "prior_high": 14.5,
+        "prior_low": 11.5,
+        "stop_after_epochs": 20
+      },
+      "objective": "equal_domain_log_loss",
+      "observation_noise": "none",
+      "output_root": "out/final_six/models",
+      "posterior_draws": 500,
+      "seed": 42,
+      "split_bundle": "data/derived/final_experiment_v1",
+      "target": "m200c",
+      "training_domains": [
+        "flamingo"
+      ]
+    },
+    "tng_dynamics": {
+      "design_record": "FINAL_EXPERIMENT_DESIGN_2026-10-01.md",
+      "experiment_id": "final_v1_tng_dynamics",
+      "mass_feature": "none",
+      "npe": {
+        "batch_size": 64,
+        "hidden_features": 64,
+        "learning_rate": 0.00016488693479340492,
+        "max_num_epochs": 200,
+        "model": "maf",
+        "num_transforms": 5,
+        "prior_high": 14.5,
+        "prior_low": 11.5,
+        "stop_after_epochs": 20
+      },
+      "objective": "equal_domain_log_loss",
+      "observation_noise": "none",
+      "output_root": "out/final_six/models",
+      "posterior_draws": 500,
+      "seed": 42,
+      "split_bundle": "data/derived/final_experiment_v1",
+      "target": "m200c",
+      "training_domains": [
+        "tng"
+      ]
+    },
+    "tng_stellar_sum": {
+      "design_record": "FINAL_EXPERIMENT_DESIGN_2026-10-01.md",
+      "experiment_id": "final_v1_tng_stellar_sum",
+      "mass_feature": "stellar_sum",
+      "npe": {
+        "batch_size": 64,
+        "hidden_features": 64,
+        "learning_rate": 0.00016488693479340492,
+        "max_num_epochs": 200,
+        "model": "maf",
+        "num_transforms": 5,
+        "prior_high": 14.5,
+        "prior_low": 11.5,
+        "stop_after_epochs": 20
+      },
+      "objective": "equal_domain_log_loss",
+      "observation_noise": "none",
+      "output_root": "out/final_six/models",
+      "posterior_draws": 500,
+      "seed": 42,
+      "split_bundle": "data/derived/final_experiment_v1",
+      "target": "m200c",
+      "training_domains": [
+        "tng"
+      ]
+    }
+  },
+  "data_identity": {
+    "flamingo": "cecc9246926d806c60a2dbd498907c3e58e4498ee2caa59e0c38b16248b73e63",
+    "historical_split_sha256": "fc38a9b561cf72bf7cb9d342385414133a732bc043adc1e80533d079ac5854b3",
+    "tng": "0c924c82f8071dd28df570e651403c21b74eab8bb1b08d9dce59d2bac10468c8"
+  },
+  "design_sha256": "9c84215c4c8a282c2215d05dd397b01e2add299667a89cafb7dcc7559264947f",
+  "environment": {
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 2050",
+    "git_commit": null,
+    "packages": {
+      "matplotlib": "3.10.8",
+      "numpy": "2.4.3",
+      "pandas": "2.3.3",
+      "sbi": "0.26.1",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.17.1",
+      "torch": "2.5.1+cu121"
+    },
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.0",
+    "roihu_job_id": null,
+    "timestamp_utc": "2026-10-01T18:44:33.479682+00:00"
+  },
+  "mode": "prepare",
+  "source_sha256": {
+    "src\\lg_npe\\__init__.py": "4089927c9e0ebb584c9f87d15960b60fedc8fe5aa1a054c9f4f8c2b46ce90363",
+    "src\\lg_npe\\config.py": "073219ba44727a0fb5dadc7d80d539ef434755999c02a3926c0609f5fcb9ae9b",
+    "src\\lg_npe\\constants.py": "6ec02055a56a75494e172352ddddc192b6287173922f3dd5e352ec5db63bc377",
+    "src\\lg_npe\\controlled_training.py": "5b1695e6b370493440ecf026b2ba95f6c48fc805c4993cafa416f306971e7134",
+    "src\\lg_npe\\data.py": "d665bcc906bbd3628cfbe6eb1773b34cdedd7a3ea0431d6a60375940cb010010",
+    "src\\lg_npe\\evaluation.py": "e17c4f13fca551a10dc75a898cade3d4ffbbad1677b6811f12cd91d95a652e62",
+    "src\\lg_npe\\features.py": "bc0540aed189169e972f11bfb290d557cd27b1d6d26e78285f58886d6d1a1839",
+    "src\\lg_npe\\final_design.py": "bc2f0e2e79eadaf711c6338a6930b786f6f4f1484db269899bac00e56276ffc9",
+    "src\\lg_npe\\inference.py": "174cc063480bab5277342c799e0468138108a2de074c80ffe27c30bf4b99438f",
+    "src\\lg_npe\\observation.py": "f443314199ed2347b1d7a528fd6a75cf540ac8105313714b2f2360fbaceb2b8e",
+    "src\\lg_npe\\registry.py": "6bc8f8e5e8f49ab880d240af8c408ca36b75e82fb8a074effe52de4f7a70b0f1",
+    "src\\lg_npe\\splitting.py": "6acf25ff8bd747ffcc6f908c2398a9cbc1186c95ebb487231b4809bb72f7728a",
+    "src\\lg_npe\\validation.py": "8ef1c625decf116780acb79304c08b7972282b6a1de8d27e76e02e62315e913d"
+  },
+  "split_sha256": "69a09e48f0abec5aef8ad9ecb70b877f6fbaa50c0ca85afbe2af7e78c9f2df0d",
+  "status": "prepared_no_new_models",
+  "target": "log10 common host M200c/Msun if same host; log10 summed host M200c/Msun otherwise"
+}

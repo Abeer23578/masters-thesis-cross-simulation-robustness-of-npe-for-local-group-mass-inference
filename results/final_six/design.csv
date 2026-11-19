@@ -1,0 +1,7 @@
+model,features,n_train,weights,scaler_mean,noise
+combined_dynamics,"['separation', 'vr', 'vt']",110319,"{'flamingo': 0.5000000000000001, 'tng': 0.5}","[755.9109704029214, -142.55756462060938, 118.77364616023978]",none
+combined_stellar_sum,"['separation', 'vr', 'vt', 'log_stellar_sum']",110319,"{'flamingo': 0.5000000000000001, 'tng': 0.5}","[755.9109704029214, -142.55756462060938, 118.77364616023978, 11.142494689371416]",none
+flamingo_dynamics,"['separation', 'vr', 'vt']",109150,{'flamingo': 1.0000000000000002},"[764.7325956749545, -125.4079560642489, 107.80295215748437]",none
+flamingo_stellar_sum,"['separation', 'vr', 'vt', 'log_stellar_sum']",109150,{'flamingo': 1.0000000000000002},"[764.7325956749545, -125.4079560642489, 107.80295215748437, 11.18821876412288]",none
+tng_dynamics,"['separation', 'vr', 'vt']",1169,{'tng': 1.0},"[747.0893451308873, -159.70717317697034, 129.74434016299512]",none
+tng_stellar_sum,"['separation', 'vr', 'vt', 'log_stellar_sum']",1169,{'tng': 1.0},"[747.0893451308873, -159.70717317697034, 129.74434016299512, 11.096770614619942]",none

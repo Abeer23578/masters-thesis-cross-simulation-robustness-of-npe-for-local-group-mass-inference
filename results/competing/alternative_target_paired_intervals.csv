@@ -1,0 +1,8 @@
+reference,candidate,population,subset,metric,n_pairs,n_components,estimate_delta,bootstrap_median_delta,ci95_low,ci95_high,fraction_below_zero,seed
+bound_sum_dynamics,bound_sum_stellar_ratio,transfer_tng,pooled,rmse,1530,1521,-0.0353908262639516,-0.0353355086674675,-0.0452461367272989,-0.0251818476870055,1.0,261950
+bound_sum_dynamics,bound_sum_stellar_ratio,transfer_tng,pooled,bias,1530,1521,-0.0056228537964665,-0.0056096286743168,-0.0114469899514841,0.0005799232926928,0.964,261950
+bound_sum_dynamics,bound_sum_stellar_ratio,transfer_tng,pooled,abs_bias,1530,1521,0.0056228537964665,0.0056096286743168,-0.0005799232926928,0.0114469899514841,0.036,261950
+bound_sum_dynamics,bound_sum_stellar_ratio,transfer_tng,pooled,coverage68,1530,1521,-0.0352941176470588,-0.0353287574604761,-0.0523920255080679,-0.0196203465035457,1.0,261950
+bound_sum_dynamics,bound_sum_stellar_ratio,transfer_tng,pooled,coverage95,1530,1521,0.011111111111111,0.011111111111111,0.0006531678641411,0.0221935738855642,0.019,261950
+bound_sum_dynamics,bound_sum_stellar_ratio,transfer_tng,pooled,coverage_error68,1530,1521,0.0162091503267974,0.0173955099607327,-0.0266943174395819,0.0431668810334836,0.2305,261950
+bound_sum_dynamics,bound_sum_stellar_ratio,transfer_tng,pooled,coverage_error95,1530,1521,-0.011111111111111,-0.011111111111111,-0.0221935738855642,-0.0006531678641411,0.978,261950

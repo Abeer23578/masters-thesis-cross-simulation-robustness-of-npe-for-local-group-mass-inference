@@ -1,0 +1,71 @@
+{
+  "calibration_sha256": "50a4cddc274a6f4ece2239fe3c984dc82f158af5b3b9a5486866a929fb985de5",
+  "deltas": [
+    -0.1,
+    -0.05,
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.36168937856918487,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6
+  ],
+  "draws": 500,
+  "environment": {
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GH200 120GB",
+    "git_commit": null,
+    "packages": {
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.2",
+      "pandas": "2.3.3",
+      "sbi": "0.27.0",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.1",
+      "torch": "2.13.0+cu130"
+    },
+    "platform": "Linux-5.14.0-687.41.1.1.el9_8.aarch64+64k-aarch64-with-glibc2.34",
+    "python": "3.12.14",
+    "roihu_job_id": "1844895",
+    "timestamp_utc": "2026-10-02T08:38:48.719740+00:00"
+  },
+  "models": {
+    "stellar_individual": {
+      "features": [
+        "separation",
+        "vr",
+        "vt",
+        "log_mstar_primary",
+        "log_mstar_secondary"
+      ],
+      "manifest_sha256": "7ccab30e2e501d92da19f4e46f6a9053628dfa50d496e55b10efb01f05d0efb1",
+      "model_sha256": "51e57f28c0a6d27178f6ca7beaf7ad1e083b4778eb84023427318c39dc6267e3",
+      "run": "out/mass_comparison/stellar_features/m200c_dynamics_stellar_individual/20260917T094931Z",
+      "split_sha256": "fc38a9b561cf72bf7cb9d342385414133a732bc043adc1e80533d079ac5854b3"
+    },
+    "stellar_sum": {
+      "features": [
+        "separation",
+        "vr",
+        "vt",
+        "log_stellar_sum"
+      ],
+      "manifest_sha256": "f6335ba63a4669751f1f18de417867ac7b02ee88a53dca1e6298486bee343aad",
+      "model_sha256": "c26e6ab59763178e0d5743d74e3fe44927d7230964e082861b610c403a969045",
+      "run": "out/mass_comparison/stellar_features/m200c_dynamics_stellar_sum/20260917T095930Z",
+      "split_sha256": "fc38a9b561cf72bf7cb9d342385414133a732bc043adc1e80533d079ac5854b3"
+    }
+  },
+  "n_test": 231,
+  "repeats": 2000,
+  "seed": 261001,
+  "status": "complete"
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "local-group-observation-evidence-v1",
+  "audit_date": "2026-10-03",
+  "prior_repository": "D:\\FLAMINGO",
+  "prior_sources": {
+    "analogues/review_fixes.py": {
+      "absolute_path": "D:\\FLAMINGO\\analogues\\review_fixes.py",
+      "sha256": "0de9deeaadba957ac4a30b14a1d26c58b8815df8e5661db2fea10f1beec8eae0"
+    },
+    "inference_uncertainty.ipynb": {
+      "absolute_path": "D:\\FLAMINGO\\inference_uncertainty.ipynb",
+      "sha256": "48644c963eadabc6184ce63b7f74af0f33923a542e6b22d18ad9b9495d5d1957"
+    },
+    "npe_model_family_comparison.ipynb": {
+      "absolute_path": "D:\\FLAMINGO\\npe_model_family_comparison.ipynb",
+      "sha256": "685bb7f7fe966ce2be0865a8a9cf831c92c1f9ffa003f68b43c3b031979d2c7b"
+    },
+    "pickles_v3/npe_model_family_lg_summary.csv": {
+      "absolute_path": "D:\\FLAMINGO\\pickles_v3\\npe_model_family_lg_summary.csv",
+      "sha256": "18a027a6edf4dd9cb10e651e1ecb3fcb23ecbb5221b217b2f10e2ad0528b08dc"
+    },
+    "OBSERVATIONAL_UNCERTAINTY_DECISION_2026-10-01.md": {
+      "absolute_path": "D:\\FLAMINGO\\OBSERVATIONAL_UNCERTAINTY_DECISION_2026-10-01.md",
+      "sha256": "1e9fb661796587038b46a4fc06089dbd7b74b08204f7c79c3f4736924b52b515"
+    },
+    "DECISION_LOG.md": {
+      "absolute_path": "D:\\FLAMINGO\\DECISION_LOG.md",
+      "sha256": "a3117c5ff9067861ea4c6dc2af77ed1ce9f271e684e2ab8897a2db85d4aca569"
+    },
+    "THESIS_VELOCITY_METADATA_AND_FIX_2026-09-06.md": {
+      "absolute_path": "D:\\FLAMINGO\\THESIS_VELOCITY_METADATA_AND_FIX_2026-09-06.md",
+      "sha256": "7749b11de91cde4a37a956b44ef22ff853323f26af591dec8b99438c67c2fc19"
+    }
+  },
+  "frozen_registry": {
+    "combined_dynamics": "out/final_six/models/final_v1_combined_dynamics/20261002T083909660616Z",
+    "combined_stellar_sum": "out/final_six/models/final_v1_combined_stellar_sum/20261002T083910963832Z",
+    "flamingo_dynamics": "out/final_six/models/final_v1_flamingo_dynamics/20261002T083908329736Z",
+    "flamingo_stellar_sum": "out/final_six/models/final_v1_flamingo_stellar_sum/20261002T083909257459Z",
+    "tng_dynamics": "out/final_six/models/final_v1_tng_dynamics/20261002T083909944244Z",
+    "tng_stellar_sum": "out/final_six/models/final_v1_tng_stellar_sum/20261002T083910389703Z"
+  },
+  "registry_sha256": "827a558fe40f54c4b9a758829dc404f81245938de2298f8ef8bd6bb6c024e036",
+  "review_fixes_sha256": "0de9deeaadba957ac4a30b14a1d26c58b8815df8e5661db2fea10f1beec8eae0",
+  "model_sha256": {
+    "combined_dynamics": "58571fbd5fe4e68231c5322a03bbd3992179d4cb5c7fa0cb78c0a7dfbe0d7060",
+    "combined_stellar_sum": "02c6d4818685743e562bbc20dbf700aebc8cce806ee9f47118c20a973fbd60eb",
+    "flamingo_dynamics": "c32fba614b3c0527b833588237b4927b67eebe47c09f01bd18b378f3977e6cd2",
+    "flamingo_stellar_sum": "006283ea2939e563285b085cb621912cd96aa62564fa92f7cd23643cf1ef97f5",
+    "tng_dynamics": "a2c00bcba73a10262b5fc3683cadff8100c9c2fd9bf41efeeefaa00421930381",
+    "tng_stellar_sum": "7a27b952a7f6eda79480d52dae600de0fb9feec12773a89c6fd1bf8adcdc5587"
+  },
+  "run_manifest_sha256": {
+    "combined_dynamics": "f7a94ace5ca62d00f7295f3e91dfca33d2e7e891bab7a705905fc84206d788df",
+    "combined_stellar_sum": "e8113b4c4c92ce2a44a101155a7e2802bf1689ea6f367f874317a44fe9d0bc4e",
+    "flamingo_dynamics": "810ada93365366da672c336725b1ba219815f4675fdde76a87246596476b64ad",
+    "flamingo_stellar_sum": "bb75c1134c0c23654b7e768a52c3d62265d250a3a6b3aebd2d7b57f57cb90236",
+    "tng_dynamics": "aba53d9c825e50113ba3d514b5582fd2a0a969922977f2e60df043f09c6820f5",
+    "tng_stellar_sum": "db417bf4145dcbc6c292671ba0da699e6f04d906f6d6dd4af440271c980f8ef3"
+  },
+  "recovery": {
+    "active_uncertainty_scenario": "Salomon2021",
+    "separation_kpc": 765.0,
+    "separation_scale_kpc": 15.0,
+    "radial_physical_km_s": -109.3,
+    "radial_scale_km_s": 4.4,
+    "tangential_location_km_s": 82.4,
+    "tangential_scale_km_s": 31.2,
+    "latest_completed_evidence": "npe_model_family_comparison.ipynb and pickles_v3/npe_model_family_lg_summary.csv (2026-09-09); inference_uncertainty.ipynb uses Salomon2021 for marginalized inference",
+    "conflicts": "vdM2012 vt=17 is a point-only alternative, not the final marginalized scenario; comments quoting 761+/-11 refer to heliocentric Li et al. distance, whereas executed helper uses 765+/-15 Galactocentric project convention",
+    "uncertainty": "Independent physical-coordinate normals; separation and vt truncated below zero. Convert physical vr to peculiar with each draw distance. No recovered full joint covariance.",
+    "stellar_prior_status": "Licquia & Newman and Tamm discussed in 2026-10-01 decision; Sick discussed in DECISION_LOG. No previous frozen-model stellar-sum LG posterior or validated joint likelihood."
+  },
+  "user_decision": {
+    "date": "2026-10-03",
+    "answer": "Include a labelled approximation",
+    "scope": "Approximate observational input distribution, with missing covariance and stellar-definition systematics stated explicitly."
+  }
+}

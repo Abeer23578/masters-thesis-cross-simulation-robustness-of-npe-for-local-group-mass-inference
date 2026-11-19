@@ -1,0 +1,9 @@
+family,radius,lower95,upper95,repeats,conditioning
+dynamics,0.35,0.31309294461189774,0.6506715755757104,500,fixed neighborhood metric/radius; resample host components within domain
+dynamics,0.5,0.32884033094493903,0.49443696621801725,500,fixed neighborhood metric/radius; resample host components within domain
+dynamics,0.75,0.423884603393743,0.5227436372179272,500,fixed neighborhood metric/radius; resample host components within domain
+dynamics,1.0,0.4681665069548211,0.5337410181652191,500,fixed neighborhood metric/radius; resample host components within domain
+stellar_sum,0.35,0.3503438157900154,1.0,500,fixed neighborhood metric/radius; resample host components within domain
+stellar_sum,0.5,0.5064286772953148,1.0,500,fixed neighborhood metric/radius; resample host components within domain
+stellar_sum,0.75,0.6817169560294003,0.8766538816228244,500,fixed neighborhood metric/radius; resample host components within domain
+stellar_sum,1.0,0.6320692826105812,0.7555076403763664,500,fixed neighborhood metric/radius; resample host components within domain
