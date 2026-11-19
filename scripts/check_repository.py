@@ -93,7 +93,11 @@ def main():
     if failures:
         print('\n'.join(failures));raise SystemExit(1)
     if args.execute:
-        for path in READING+[ROOT/'notebooks/90_generate_catalogue_caches.ipynb']:
+        targets=READING.copy()
+        summary=ROOT/'notebooks/key_results_from_the_thesis.ipynb'
+        if summary.is_file():targets.append(summary)
+        targets.append(ROOT/'notebooks/90_generate_catalogue_caches.ipynb')
+        for path in targets:
             subprocess.run([sys.executable,'-X','utf8','-B',str(Path(__file__)), '--worker',str(path)],check=True)
     print('All requested checks passed.')
 

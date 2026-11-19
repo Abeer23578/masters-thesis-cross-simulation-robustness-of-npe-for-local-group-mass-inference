@@ -8,6 +8,8 @@ selection, exploratory analysis, prediction and calibration, then test the featu
 and population differences associated with transfer failure. The final notebooks
 apply the models to the observed Local Group and explore classifier-weighted mixtures.
 
+For a short overview of the findings, see [Key results from the thesis](notebooks/key_results_from_the_thesis.ipynb).
+
 ## Setup
 
 Use Python 3.11 or newer. From the repository folder:

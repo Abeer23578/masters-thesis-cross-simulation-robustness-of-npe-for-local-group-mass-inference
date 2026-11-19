@@ -54,5 +54,12 @@
       "synthetic_tests_passed": 44,
       "archive_integrity_test": "skips without optional archived inputs; strict assertions retained when inputs are present"
     }
+  },
+  "key_results_summary": {
+    "notebook": "notebooks/key_results_from_the_thesis.ipynb",
+    "code_cells_passed": 5,
+    "figures": 3,
+    "fresh_jupyter_kernel": true,
+    "claims_checked_against_thesis_and_code": true
   }
 }
