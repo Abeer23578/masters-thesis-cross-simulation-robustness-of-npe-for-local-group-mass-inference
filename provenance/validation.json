@@ -57,9 +57,19 @@
   },
   "key_results_summary": {
     "notebook": "notebooks/key_results_from_the_thesis.ipynb",
-    "code_cells_passed": 5,
-    "figures": 3,
+    "code_cells_passed": 12,
+    "figures": 5,
     "fresh_jupyter_kernel": true,
-    "claims_checked_against_thesis_and_code": true
+    "claims_checked_against_thesis_and_code": true,
+    "sample_size_scope": "population KS and ablation reject their references; core-dynamics JSD does not",
+    "expanded_sections": [
+      "population and sample-size references",
+      "training noise",
+      "MMD and GMM",
+      "calibration",
+      "common-support configurations and score-band sensitivity",
+      "alternative targets and empirical priors",
+      "completed experiments and future work"
+    ]
   }
 }
